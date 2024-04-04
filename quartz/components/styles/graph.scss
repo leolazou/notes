@@ -1,6 +1,9 @@
 @use "../../styles/variables.scss" as *;
 
 .graph {
+  flex-grow: 1;
+  display: flex;
+  
   & > h3 {
     font-size: 1rem;
     margin: 0;
@@ -10,10 +13,20 @@
     border-radius: 5px;
     border: 1px solid var(--lightgray);
     box-sizing: border-box;
-    height: 250px;
+    // height: 250px;
     margin: 0.5em 0;
     position: relative;
     overflow: hidden;
+    flex-grow: 1;
+
+    @media all and (max-width: $fullPageWidth) {
+      height: 150px;
+    }
+
+    & > #graph-container {
+      height: 100%;
+      width: 100%;
+    }
 
     & > #global-graph-icon {
       color: var(--dark);
