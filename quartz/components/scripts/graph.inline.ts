@@ -124,7 +124,7 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
     )
     .force("center", d3.forceCenter().strength(centerForce))
 
-  const height = Math.max(graph.offsetHeight, 250)
+  const height = graph.offsetHeight // qurtz default: Math.max(graph.offsetHeight, 150)
   const width = graph.offsetWidth
 
   const svg = d3
