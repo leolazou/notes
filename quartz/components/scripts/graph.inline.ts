@@ -152,7 +152,7 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
     const isCurrent = d.id === slug
     if (isCurrent) {
       return "var(--secondary)"
-    } else if (visited.has(d.id) || d.id.startsWith("tags/")) {
+    } else if (visited.has(d.id) && !d.id.startsWith("tags/")) {
       return "var(--tertiary)"
     } else {
       return "var(--gray)"
@@ -263,6 +263,12 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
     })
     // @ts-ignore
     .call(drag(simulation))
+    
+  // make tags hollow circles
+  node.filter((d) => d.id.startsWith("tags/"))
+    .attr("stroke", color)
+    .attr("stroke-width", 2)
+    .attr("fill", "var(--light)")
 
   // draw labels
   const labels = graphNode
