@@ -1,4 +1,4 @@
-# [Leo's notes ↗](https://notes.leolazou.com)
+# [Leo's notes ↗](https://graph.leolazou.com)
 
 A place to share, only starting.
 <br>
