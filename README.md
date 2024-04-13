@@ -2,7 +2,7 @@
 
 A place to share, only starting.
 <br>
-They call it a _digital garden_, so be it.
+They call it a _digital garden_. That's beautiful, but I prefer _graph_.
 
 <br>
 
