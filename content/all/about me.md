@@ -1,0 +1,4 @@
+- role: project leader, business analyst
+- cv: [leolazou.com/cv](https://leolazou.com/cv)
+- contact: [leolazou.com/reach](https://leolazou.com/reach)
+- location: France 🇫🇷
