@@ -18,25 +18,18 @@ concurrency:
   cancel-in-progress: false
  
 jobs:
-  fetch-content:  # fetches the content from private repo
-    runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-22.04
     steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Fetch all history for git info
       - name: Fetch Content from Private Repo 
         uses: actions/checkout@v3 
         with:
           repository: ${{ vars.CONTENT_REPO }}
           token: ${{ secrets.CONTENT_REPO_ACCESS_TOKEN }}
           path: content  
-
-  build:
-    needs: [fetch-content]  # Ensure content is fetched first
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Verify Content 
-        run: ls -la content
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0 # Fetch all history for git info
       - uses: actions/setup-node@v3
         with:
           node-version: 18.14
