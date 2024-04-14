@@ -1,8 +1,6 @@
 ---
-title: welcome
+title: home
 ---
-[[about me]]  ///  [[experiments]]  ///  [leolazou.com](http://leolazou.com)
-
 i am beginning to build this *graph* of ideas, thoughts, information (some call it *digital garden*):
 - you navigate from link to link, from idea to idea
 - the graph shows connections between pages / ideas; red are visited
