@@ -5,6 +5,8 @@ on:
     branches:
       - publishing
       - v4
+  repository_dispatch:  # triggered on content repo update
+    types: [content-updated] 
  
 permissions:
   contents: read
@@ -16,7 +18,18 @@ concurrency:
   cancel-in-progress: false
  
 jobs:
+  fetch-content:  # fetches the content from private repo
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch Content from Private Repo 
+        uses: actions/checkout@v3 
+        with:
+          repository: ${{ vars.CONTENT_REPO }}
+          token: ${{ secrets.CONTENT_REPO_ACCESS_TOKEN }}
+          path: ./content  
+
   build:
+    needs: [fetch-content]  # Ensure content is fetched first
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
