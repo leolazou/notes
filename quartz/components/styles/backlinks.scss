@@ -12,8 +12,10 @@
     margin: 0.5rem 0;
 
     & > li {
+      font-size: small;
       & > a {
         background-color: transparent;
+        font-size: medium;
       }
     }
   }

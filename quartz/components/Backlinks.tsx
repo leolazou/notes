@@ -18,7 +18,7 @@ const Backlinks: QuartzComponent = ({
         <h3>{i18n(cfg.locale).components.backlinks.title}</h3>
         <ul class="overflow">
           {backlinkFiles.map((f) => (
-            <li>
+            <li>←
               <a href={resolveRelative(fileData.slug!, f.slug!)} class="internal">
                 {f.frontmatter?.title}
               </a>
