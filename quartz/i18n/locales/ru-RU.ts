@@ -22,8 +22,8 @@ export default {
       quote: "Цитата",
     },
     backlinks: {
-      title: "Обратные ссылки",
-      noBacklinksFound: "Обратные ссылки отсутствуют",
+      title: "Упоминания",
+      noBacklinksFound: "Упоминания отсутствуют",
     },
     themeToggle: {
       lightMode: "Светлый режим",
