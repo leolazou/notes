@@ -39,6 +39,7 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
     scale,
     repelForce,
     centerForce,
+    orientationForce,
     linkDistance,
     fontSize,
     opacityScale,
@@ -112,6 +113,9 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
     links: links.filter((l) => neighbourhood.has(l.source) && neighbourhood.has(l.target)),
   }
 
+  const height = graph.offsetHeight // qurtz default: Math.max(graph.offsetHeight, 150)
+  const width = graph.offsetWidth
+
   const simulation: d3.Simulation<NodeData, LinkData> = d3
     .forceSimulation(graphData.nodes)
     .force("charge", d3.forceManyBody().strength(-100 * repelForce))
@@ -123,9 +127,8 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
         .distance(linkDistance),
     )
     .force("center", d3.forceCenter().strength(centerForce))
-
-  const height = graph.offsetHeight // qurtz default: Math.max(graph.offsetHeight, 150)
-  const width = graph.offsetWidth
+    .force("x", d3.forceX().strength(height > width ? orientationForce * (1 - width / height) : 0))
+    .force("y", d3.forceY().strength(width > height ? orientationForce * (1 - height / width) : 0))
 
   const svg = d3
     .select<HTMLElement, NodeData>("#" + container)

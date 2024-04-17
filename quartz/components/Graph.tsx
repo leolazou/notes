@@ -13,6 +13,7 @@ export interface D3Config {
   repelForce: number
   centerForce: number
   linkDistance: number
+  orientationForce: number
   fontSize: number
   opacityScale: number
   removeTags: string[]
@@ -34,6 +35,7 @@ const defaultOptions: GraphOptions = {
     repelForce: 0.5,
     centerForce: 0.3,
     linkDistance: 30,
+    orientationForce: 0.05,
     fontSize: 0.6,
     opacityScale: 1,
     showTags: true,
@@ -48,6 +50,7 @@ const defaultOptions: GraphOptions = {
     repelForce: 0.5,
     centerForce: 0.3,
     linkDistance: 30,
+    orientationForce: 0,
     fontSize: 0.6,
     opacityScale: 1,
     showTags: true,
