@@ -14,7 +14,7 @@ const config: QuartzConfig = {
     analytics: null,
     locale: "en-US",
     baseUrl: "graph.leolazou.com",
-    ignorePatterns: ["private", "templates", ".obsidian", ".*"],
+    ignorePatterns: ["private", "drafts", "templates", ".obsidian", ".*"],
     defaultDateType: "created",
     theme: {
       fontOrigin: "googleFonts",
