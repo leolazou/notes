@@ -1,4 +1,5 @@
 @use "./base.scss";
+@use "./variables.scss" as *;
 
 // my custom CSS
 
@@ -27,8 +28,11 @@ h2 {
 .page {
     #quartz-body {
         .sidebar.left {
-            margin-top: 0rem;
             height: 90vh;
+
+            @media all and (max-width: $fullPageWidth) {
+                margin-top: 0rem;
+            }
         }
     }
 }
