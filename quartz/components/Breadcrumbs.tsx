@@ -33,10 +33,10 @@ interface BreadcrumbOptions {
 }
 
 const defaultOptions: BreadcrumbOptions = {
-  spacerSymbol: "❯",
-  rootName: "Home",
+  spacerSymbol: "/", // "❯",
+  rootName: "leolazou",
   resolveFrontmatterTitle: true,
-  hideOnRoot: true,
+  hideOnRoot: false,
   showCurrentPage: true,
 }
 
@@ -66,7 +66,7 @@ export default ((opts?: Partial<BreadcrumbOptions>) => {
 
     // Format entry for root element
     const firstEntry = formatCrumb(options.rootName, fileData.slug!, "/" as SimpleSlug)
-    const crumbs: CrumbData[] = [] // default: [firstEntry]
+    const crumbs: CrumbData[] = [firstEntry]
 
     if (!folderIndex && options.resolveFrontmatterTitle) {
       folderIndex = new Map()
@@ -126,8 +126,11 @@ export default ((opts?: Partial<BreadcrumbOptions>) => {
       <nav class={classNames(displayClass, "breadcrumb-container")} aria-label="breadcrumbs">
         {crumbs.map((crumb, index) => (
           <div class="breadcrumb-element">
-            <a href={crumb.path}>{crumb.displayName}</a>
-            {index !== crumbs.length - 1 && <p>{` ${options.spacerSymbol} `}</p>}
+            {crumb.path
+              ? <a href={crumb.path}>{crumb.displayName}</a>
+              : <p>{crumb.displayName}</p>
+            }
+            {index !== crumbs.length - 1 && <p className="breadcrumb-spacer">{` ${options.spacerSymbol} `}</p>}
           </div>
         ))}
       </nav>
