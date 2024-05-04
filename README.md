@@ -6,10 +6,12 @@ Only starting.
 <br>
 They call it a _digital garden_. A very beautiful name, but I prefer _graph_.
 
-This repo builds and deploys the website. I've externalised the content into a separate private repo.
+Tech:
+This repo builds and deploys the website.
+The content, an Obsidian vault, is in a separate private repo. Whenever the content is edited and pushed (on desktop or mobile), a build is tiggered and the website reflects the latest changes within a minute.
 
 <br>
 
 Content сopyright: [@leolazou](https://github.com/leolazou)
 <br>
-Powered by: [Obsidian](https://obsidian.md) + [Quartz](https://github.com/jackyzha0/quartz.git) (thanks @jackyzha0 for the amazing software!)
+Powered by: [Obsidian](https://obsidian.md) + [Git](https://github.com/denolehov/obsidian-git) + [Quartz](https://github.com/jackyzha0/quartz.git) (thanks @jackyzha0 for the amazing software!)
