@@ -126,7 +126,7 @@ export default ((opts?: Partial<BreadcrumbOptions>) => {
       <nav class={classNames(displayClass, "breadcrumb-container")} aria-label="breadcrumbs">
         {crumbs.map((crumb, index) => (
           <div class="breadcrumb-element">
-            {crumb.path
+            {crumb.path || crumb.displayName[0] === "#"
               ? <a href={crumb.path}>{crumb.displayName}</a>
               : <p>{crumb.displayName}</p>
             }
