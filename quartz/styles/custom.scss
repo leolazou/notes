@@ -36,7 +36,7 @@ h2 {
         }
         .page-header {
             @media all and (max-width: $fullPageWidth) {
-                margin-top: 1rem;
+                margin-top: 0rem;
             }
         }
     }
