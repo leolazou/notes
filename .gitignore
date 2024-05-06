@@ -1,12 +1,21 @@
-.DS_Store
+# project
 .gitignore
 node_modules
+tsconfig.tsbuildinfo
+
+# OS
+.DS_Store
+
+# Obsidian
+.obsidian
+
+# Quartz
 public
 prof
-tsconfig.tsbuildinfo
-.obsidian
 .quartz-cache
-private/
 .replit
 replit.nix
+
+# content
 content/
+private/
