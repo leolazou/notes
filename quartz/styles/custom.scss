@@ -5,7 +5,7 @@
 
 .text-highlight {
     background-color: #6fd68c66;
-  }
+}
 
 h1,
 h2,
@@ -23,6 +23,16 @@ thead {
 
 h2 {
     font-size: 1.2rem;
+}
+
+a {
+    &.internal {
+        background-color: none;
+
+        &.tag-link {
+            background-color: var(--highlight);
+        }
+    }
 }
 
 .page {
