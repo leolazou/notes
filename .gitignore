@@ -1,7 +1,8 @@
-# project
+# environment
 .gitignore
 node_modules
 tsconfig.tsbuildinfo
+.vscode
 
 # OS
 .DS_Store
