@@ -34,7 +34,7 @@ interface BreadcrumbOptions {
 
 const defaultOptions: BreadcrumbOptions = {
   spacerSymbol: "/", // "❯",
-  rootName: "leolazou",
+  rootName: "leo",
   resolveFrontmatterTitle: true,
   hideOnRoot: false,
   showCurrentPage: true,
