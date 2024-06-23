@@ -21,10 +21,15 @@ footer {
     flex-direction: row;
     gap: 1rem;
     // margin-top: -1rem;
+
+    & a {
+      font-weight: normal;
+      color: var(--gray);
+    }
   }
 
   & p, p a {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     color: var(--gray);
   }
 }
