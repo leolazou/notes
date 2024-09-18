@@ -9,7 +9,7 @@ title: home
 
 [[experiments]]
 
-[leolazou.com](http://leolazou.com)
+[**leolazou.com**](http://leolazou.com)
 
 <br/>
 <br/>
