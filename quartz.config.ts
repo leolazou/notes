@@ -15,7 +15,7 @@ const config: QuartzConfig = {
     locale: "en-US",
     baseUrl: "graph.leolazou.com",
     ignorePatterns: ["private", "drafts", "templates", ".obsidian", ".*"],
-    defaultDateType: "modified",  // to rely on git dates, ad advised in CreatedModifiedDate.md
+    defaultDateType: "created",  // to rely on git dates, ad advised in CreatedModifiedDate.md
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
@@ -52,7 +52,7 @@ const config: QuartzConfig = {
     transformers: [
       Plugin.FrontMatter(),
       Plugin.CreatedModifiedDate({
-        priority: ["frontmatter", "filesystem"],
+        priority: ["frontmatter"],
       }),
       Plugin.Latex({ renderEngine: "katex" }),
       Plugin.SyntaxHighlighting({
