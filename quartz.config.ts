@@ -15,7 +15,7 @@ const config: QuartzConfig = {
     locale: "en-US",
     baseUrl: "graph.leolazou.com",
     ignorePatterns: ["private", "drafts", "templates", ".obsidian", ".*"],
-    defaultDateType: "created",  // to rely on git dates, ad advised in CreatedModifiedDate.md
+    defaultDateType: "created",
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
