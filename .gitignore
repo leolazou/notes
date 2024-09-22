@@ -3,6 +3,7 @@
 node_modules
 tsconfig.tsbuildinfo
 .vscode
+.idx
 
 # OS
 .DS_Store
