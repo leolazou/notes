@@ -13,7 +13,7 @@ const config: QuartzConfig = {
     enablePopovers: true,
     analytics: null,
     locale: "en-US",
-    baseUrl: "graph.leolazou.com",
+    baseUrl: "leolazou.com",
     ignorePatterns: ["private", "drafts", "templates", ".obsidian", ".*"],
     defaultDateType: "created",
     theme: {
