@@ -5,6 +5,11 @@ footer {
   margin-bottom: 0.7rem;
   opacity: 0.7;
   
+  & hr {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
   & div {
     display: flex; 
     flex-direction: row;
@@ -28,7 +33,7 @@ footer {
     }
   }
 
-  & p, p a {
+  & p, a {
     font-size: 0.8rem;
     color: var(--gray);
   }
