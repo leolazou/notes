@@ -12,6 +12,8 @@ export const sharedPageComponents: SharedLayout = {
   footer: Component.Footer({
     links: {
       "@leolazou": "https://leolazou.com",
+      "£": "https://leolazou.com/markets",
+      "$": "https://leolazou.com/tip"
     },
   }),
 }
@@ -21,7 +23,7 @@ export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     // Component.Breadcrumbs(),
     // Component.ArticleTitle(),
-    Component.ContentMeta(),
+    // Component.ContentMeta(),
     Component.TagList(),
   ],
   left: [
