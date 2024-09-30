@@ -23,7 +23,7 @@ export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     // Component.Breadcrumbs(),
     // Component.ArticleTitle(),
-    // Component.ContentMeta(),
+    // Component.ContentMeta(),  // remove margin-bottom on breadcrumbs.scss if adding it back
     Component.TagList(),
   ],
   left: [
