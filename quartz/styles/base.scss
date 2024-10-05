@@ -69,7 +69,7 @@ a {
 
   &.internal {
     text-decoration: none;
-    // background-color: var(--highlight);
+    background-color: none;
     padding: 0 0.1rem;
     border-radius: 5px;
     line-height: 1.4rem;
@@ -83,7 +83,12 @@ a {
       &::before {
         content: "#";
       }
+      background-color: var(--highlight);
     }
+  }
+
+  &.external {
+    font-weight: revert;  // not semi-bold, reverts to font specified in the file
   }
 }
 
