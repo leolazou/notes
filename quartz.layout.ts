@@ -11,9 +11,10 @@ export const sharedPageComponents: SharedLayout = {
   ],
   footer: Component.Footer({
     links: {
-      "@leolazou": "https://leolazou.com",
-      "£": "/markets",
-      "$": "/tip"
+      "///": "/.",
+      "leo": "/about-me",
+      "cv": "/cv",
+      "tip": "/tip"
     },
   }),
 }
